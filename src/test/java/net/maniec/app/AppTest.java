@@ -1,22 +1,21 @@
-package com.mycompany.app;
+package net.maniec.app;
+
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.Test;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import org.junit.Before;
-import org.junit.Test;
-import org.junit.After;
-import static org.junit.Assert.*;
 
-/**
- * Unit test for simple App.
- */
-public class AppTest
-{
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.fail;
 
-    private final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+class AppTest {
 
-    @Before
-    public void setUpStreams() {
+    private static final ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+
+    @BeforeAll
+    static void setUp() {
         System.setOut(new PrintStream(outContent));
     }
 
@@ -30,8 +29,7 @@ public class AppTest
     }
 
     @Test
-    public void testAppMain()
-    {
+    public void testAppMain() {
         App.main(null);
         try {
             assertEquals("Hello World!" + System.getProperty("line.separator"), outContent.toString());
@@ -40,9 +38,8 @@ public class AppTest
         }
     }
 
-    @After
-    public void cleanUpStreams() {
+    @AfterAll
+    static void tearDown() {
         System.setOut(null);
     }
-
 }
