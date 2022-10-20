@@ -1,10 +1,16 @@
-# simple-java-maven-app
+# jenkins-docker-agent
 
-This repository is for the
-[Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
+Cloned from [Build a Java app with Maven](https://jenkins.io/doc/tutorials/build-a-java-app-with-maven/)
 tutorial in the [Jenkins User Documentation](https://jenkins.io/doc/).
 
-The repository contains a simple Java application which outputs the string
+## Key points
+- Java, Maven, JUnit
+- 3-stages Pipeline
+- Docker in Docker
+- Jenkins Docker agent
+
+## From Upstream
+Simple Java application which outputs the string
 "Hello world!" and is accompanied by a couple of unit tests to check that the
 main application works as expected. The results of these tests are saved to a
 JUnit XML report.
