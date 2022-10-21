@@ -18,8 +18,8 @@
   </properties>
 
   <dependencies>
+    <!-- JUnit 5 Platform -->
     <!--
-        JUnit 5 Platform
         To get started, you need to add at least a single TestEngine implementation
         We can get the required dependencies by adding the junit-jupiter dependency to the test scope
         This is an aggregator artifact which simplifies dependency management because it has the following transitive dependencies:
@@ -40,8 +40,8 @@
   <build>
     <pluginManagement>
       <plugins>
+        <!-- Maven Compiler Plugin -->
         <!--
-            Maven Compiler Plugin
             Has two goals, which are already bound to specific phases of the default lifecycle:
             -   compile     – compile main source files
             -   testCompile – compile test source files
@@ -57,8 +57,8 @@
     </pluginManagement>
 
     <plugins>
+      <!-- Maven Surefire Plugin -->
       <!--
-          Maven Surefire Plugin
           Is used during the test phase of the build lifecycle to execute the unit tests
           It generates reports in two different file formats: *.txt and *.xml
           By default, these files are generated in ${basedir}/target/surefire-reports/TEST-*.xml
@@ -69,8 +69,8 @@
         <version>3.0.0-M7</version>
       </plugin>
 
+      <!-- Maven JAR Plugin -->
       <!--
-          Maven JAR Plugin
           Provides the capability to build jars
           However, just executing 'mvn package' will be enough since 'jar' is the default packaging type
           Usually there is no need to mention 'maven-jar-plugin' explicit because it's bound to the Maven Build Life Cycle
@@ -90,8 +90,8 @@
         </configuration>
       </plugin>
 
+      <!-- Maven Enforcer Plugin -->
       <!--
-          Maven Enforcer Plugin
           Has two goals:
           -   enforcer:enforce        >   runs during a project build to execute rules specified in the configuration
           -   enforcer:display-info   >   shows current information about the built-in rules that are present in the project's pom
