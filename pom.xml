@@ -113,7 +113,7 @@
                     This eliminates the disparity might arise from using diff versions of Maven and JDK in dev envs
                 -->
                 <requireMavenVersion>
-                  <version>[3.8.6,)</version>
+                  <version>[3.8.3,)</version>
                 </requireMavenVersion>
                 <requireJavaVersion>
                   <version>11</version>
